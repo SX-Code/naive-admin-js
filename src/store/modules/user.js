@@ -46,7 +46,16 @@ export const useUserStore = defineStore({
     // 登录
     async login(userInfo) {
       try {
-        return Promise.resolve(userInfo);
+        const response = await login(userInfo);
+        const { data: result, code } = response;
+        if (code === ResultEnum.SUCCESS) {
+          const ex = 7 * 24 * 60 * 60;
+          storage.set(ACCESS_TOKEN, result.token, ex);
+          storage.set(CURRENT_USER, result, ex);
+          this.setToken(result.token);
+          this.setUserInfo(result);
+        }
+        return Promise.resolve(response);
       } catch (e) {
         return Promise.reject(e);
       }
@@ -55,7 +64,26 @@ export const useUserStore = defineStore({
     // 获取用户信息
     GetInfo() {
       const that = this;
-      return {}
+      return new Promise((resolve, reject) => {
+        getUserInfo()
+          .then((res) => {
+            const result = res;
+            if (result.permissions && result.permissions.length) {
+              const permissionsList = result.permissions;
+              that.setPermissions(permissionsList);
+              that.setUserInfo(result);
+            } else {
+              reject(
+                new Error('getInfo: permissionsList must be a non-null array !')
+              );
+            }
+            that.setAvatar(result.avatar);
+            resolve(res);
+          })
+          .catch((error) => {
+            reject(error);
+          });
+      });
     },
 
     // 登出
