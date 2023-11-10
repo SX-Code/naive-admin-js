@@ -58,14 +58,14 @@
             <n-tab-pane name="code" tab="手机验证码登陆">
               <n-form ref="codeLoginformRef" :model="model" :rules="rules" label-placement="top" :show-label="false">
                 <n-form-item label="" path="phone">
-                  <n-input v-model:value="model.account" placeholder="输入手机号码">
+                  <n-input v-model:value="model.phone" placeholder="输入手机号码">
                     <template #prefix>
                       <n-icon :component="MobileOutlined" />
                     </template>
                   </n-input>
                 </n-form-item>
                 <n-form-item label="" path="checkCode">
-                  <n-input v-model:value="model.password" placeholder="输入验证码">
+                  <n-input v-model:value="model.checkCode" placeholder="输入验证码">
                     <template #prefix>
                       <n-icon :component="SafetyOutlined" />
                     </template>
