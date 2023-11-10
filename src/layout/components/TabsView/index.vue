@@ -164,13 +164,7 @@ export default defineComponent({
       const navMode = unref(getNavMode);
       const { minMenuWidth, menuWidth } = unref(getMenuSetting);
       const { fixed } = unref(getMultiTabsSetting);
-      let lenNum =
-        navMode === 'horizontal' || !isMixMenuNoneSub.value
-          ? '0px'
-          : collapsed
-            ? `${minMenuWidth}px`
-            : `${menuWidth}px`;
-
+      let lenNum = navMode === 'horizontal' || !isMixMenuNoneSub.value ? 0 : collapsed ? minMenuWidth : menuWidth;
       if (getIsMobile.value) {
         return {
           left: '0px',
@@ -178,8 +172,8 @@ export default defineComponent({
         };
       }
       return {
-        left: lenNum,
-        width: `calc(100% - ${!fixed ? '0px' : lenNum})`,
+        left: `${lenNum}px`,
+        width: `calc(100% - ${!fixed ? '0px' : `${lenNum + 20}px`})`,
       };
     });
 
