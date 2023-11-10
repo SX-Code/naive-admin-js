@@ -1,6 +1,7 @@
 import { storage } from '@/utils/Storage';
 import { defineStore } from 'pinia';
 import { store } from '@/store';
+import { login } from '@/api/user'
 import { ACCESS_TOKEN, CURRENT_USER } from '../mutation-types';
 
 export const useUserStore = defineStore({

@@ -18,7 +18,15 @@ const naive = NaiveUI.create({
     NaiveUI.NBreadcrumbItem,
     NaiveUI.NBreadcrumb,
     NaiveUI.NTooltip,
-    NaiveUI.NAvatar
+    NaiveUI.NAvatar,
+    NaiveUI.NTabs,
+    NaiveUI.NTabPane,
+    NaiveUI.NForm,
+    NaiveUI.NFormItem,
+    NaiveUI.NInput,
+    NaiveUI.NCheckbox,
+    NaiveUI.NDivider,
+    NaiveUI.NSpace
 ],
 });
 export function setupNaive(app) {
