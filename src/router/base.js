@@ -2,8 +2,8 @@ import { ErrorPage, RedirectName, Layout } from '@/router/constant';
 
 // 404 on a page
 export const ErrorPageRoute = {
-  path: '/:path(.*)*',
-  name: 'ErrorPage',
+  path: '/:catchAll(.*)*',
+  // name: 'ErrorPage',
   component: Layout,
   meta: {
     title: 'ErrorPage',
@@ -11,8 +11,8 @@ export const ErrorPageRoute = {
   },
   children: [
     {
-      path: '/:path(.*)*',
-      name: 'ErrorPageSon',
+      path: '/:catchAll(.*)*',
+      // name: 'ErrorPageSon',
       component: ErrorPage,
       meta: {
         title: 'ErrorPage',

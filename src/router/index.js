@@ -2,6 +2,7 @@ import { PageEnum } from '@/enums/pageEnum';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import { RedirectRoute } from '@/router/base';
 import { createRouterGuards } from './router-guards';
+import { ErrorPageRoute } from './base';
 
 const modules = import.meta.glob('./modules/**/*.js', { eager: true });
 
@@ -45,6 +46,7 @@ export const constantRouter = [
   LoginRoute,
   RootRoute,
   RedirectRoute,
+  ErrorPageRoute
 ];
 
 const router = createRouter({
