@@ -26,7 +26,12 @@ const naive = NaiveUI.create({
     NaiveUI.NInput,
     NaiveUI.NCheckbox,
     NaiveUI.NDivider,
-    NaiveUI.NSpace
+    NaiveUI.NSpace,
+    NaiveUI.NSwitch,
+    NaiveUI.NDataTable,
+    NaiveUI.NCheckboxGroup,
+    NaiveUI.NPopover,
+    NaiveUI.NCard
 ],
 });
 export function setupNaive(app) {
