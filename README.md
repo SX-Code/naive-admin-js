@@ -3,7 +3,7 @@
 
 > 源项目地址：https://github.com/jekip/naive-ui-admin
 >
-> 本项目文档：[AdminPro JS版搭建流程](https://sx-code.github.io/wiki/adminpro/01_introduce/index.html)
+> 本项目文档：[Naive Ui Admin搭建流程](https://sx-code.github.io/wiki/adminpro/01_introduce/index.html)
 
 
 ## 页面预览
@@ -12,6 +12,12 @@
 
 仪表盘页面
 ![](https://gcore.jsdelivr.net/gh/sx-code/tuchuang@main/naive-admin/dashboard.png)
+
+表格页面
+![](https://gcore.jsdelivr.net/gh/sx-code/tuchuang@main/naive-admin/admin05.png)
+
+表单页面
+![](https://gcore.jsdelivr.net/gh/sx-code/tuchuang@main/naive-admin/admin06.png)
 
 ## 运行项目
 

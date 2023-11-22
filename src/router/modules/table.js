@@ -12,7 +12,7 @@ const routes = [
     meta: {
       title: 'BasicTable表格',
       icon: renderIcon(TableOutlined),
-      sort: 0,
+      sort: 1,
     },
     children: [
       {

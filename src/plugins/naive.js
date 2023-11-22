@@ -31,7 +31,16 @@ const naive = NaiveUI.create({
     NaiveUI.NDataTable,
     NaiveUI.NCheckboxGroup,
     NaiveUI.NPopover,
-    NaiveUI.NCard
+    NaiveUI.NCard,
+    NaiveUI.NRadio,
+    NaiveUI.NRadioGroup,
+    NaiveUI.NGi,
+    NaiveUI.NGrid,
+    NaiveUI.NSelect,
+    NaiveUI.NDatePicker,
+    NaiveUI.NTimePicker,
+    NaiveUI.NCheckbox,
+    NaiveUI.NRadioGroup
 ],
 });
 export function setupNaive(app) {
