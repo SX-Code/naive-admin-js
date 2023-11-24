@@ -17,7 +17,7 @@ let params = reactive({})
 
 // 注册表单
 const [register, { setProps }] = useForm({
-  gridProps: { cols: 3 },
+  gridProps: { cols: '1 s:1 m:2 l:3 xl:4 2xl:4' },
   showAdvancedButton: true,
   labelWidth: 100,
   schemas,
